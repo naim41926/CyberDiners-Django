@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+<form action='.' method='POST' enctype="multipart/form-data" >
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type='submit' value='Save' />
+</form>
+
+<!-- <main>
+    <div>
+        <h2> Add Item Form</h2>
+
+        <form enctype="multipart/form-data" method="POST" class="card-body">
+            {% csrf_token %}
+            <h3>Item</h3>
+
+            <div class='hideable_shipping_form'>
+
+                <div class="md-form mb-5">
+                    <input type='text' placeholder='title goes here' id='name' name='name' class='form-control' />
+                    <label for="id_name" class="">Item Name</label>
+                </div>
+
+                <div class="md-form mb-5">
+                    <input type='number' placeholder='price goes here' id='price' name='price' class='form-control' />
+                    <label for="price" class="">Price</label>
+                </div>
+
+                <div class="md-form mb-5">
+                    <input type='number' placeholder='Discount goes here' id='discount_price' name='discount_price'
+                        class='form-control' />
+                    <label for="item_discount_price" class="">Discount Price</label>
+                </div>
+
+                <div class="md-form mb-5">
+                    <input type='text' placeholder='Category goes here' id='category' name='category'
+                        class='form-control' />
+                    <label for="item_category" class="">Category</label>
+                </div>
+
+                <div class="md-form mb-5">
+                    <input type='text' placeholder='label goes here' id='label' name='label' class='form-control' />
+                    <label for="item_label" class="">Label</label>
+                </div>
+
+                <div class="md-form mb-5">
+                    <input type='text' placeholder='Slug goes here' id='slug' name='slug' class='form-control' />
+                    <label for="item_slug" class="">Slug</label>
+                </div>
+
+                <div class="md-form mb-5">
+                    <input type='text' placeholder='desc goes here' id='description' name='description'
+                        class='form-control' />
+                    <label for="item_desc" class="">description</label>
+                </div>
+
+                <div class="md-form mb-5">
+                    <input type='file' placeholder='image goes here' id='image' name='image' class='form-control' />
+                    <label for="item_image" class="">image</label>
+                </div>
+
+                <div>
+
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Continue</button>
+                </div>
+            </div>
+    </div>
+
+
+    </form>
+    </div>
+</main> -->
+
+
+{% endblock content %}
